@@ -21,6 +21,7 @@ public class SAPSourceConnector extends SourceConnector {
   private String jcoLang;
   private String jcoPoolCapacity;
   private String jcoPeakLimit;
+  private String jcoSAPRouterString;
   private String odpName;
   private String odpContext;
   private String odpSubscriberType;
@@ -29,7 +30,6 @@ public class SAPSourceConnector extends SourceConnector {
   private String odptopic;
   private String packageSize;
   private String extractionMode;
-  private String sapRouterString;
 
 
   @Override
