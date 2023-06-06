@@ -29,6 +29,7 @@ public class SAPSourceConnector extends SourceConnector {
   private String odptopic;
   private String packageSize;
   private String extractionMode;
+  private String sapRouterString;
 
 
   @Override
@@ -58,6 +59,7 @@ public class SAPSourceConnector extends SourceConnector {
     odptopic = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.ODPTopicName);
     packageSize =  String.valueOf(sapSourceConnectorConfig.getInt(SAPSourceConnectorConfig.MAX_PACKAGE_SIZE));
     extractionMode = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.EXTRACTION_MODE);
+    sapRouterString = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.SAPROUTER_STRING);
   }
 
   @Override
@@ -90,6 +92,7 @@ public class SAPSourceConnector extends SourceConnector {
     config.put(SAPSourceConnectorConfig.ODPTopicName, odptopic);
     config.put(SAPSourceConnectorConfig.MAX_PACKAGE_SIZE, packageSize);
     config.put(SAPSourceConnectorConfig.EXTRACTION_MODE, extractionMode);
+    config.put(SAPSourceConnectorConfig.SAPROUTER_STRING, sapRouterString);
     configs.add(config);
     return configs;
 
