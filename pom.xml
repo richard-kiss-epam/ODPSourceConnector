@@ -10,7 +10,7 @@
     <name>ODPSAPSourceConnector</name>
 
     <properties>
-        <kafka.version>0.10.2.0</kafka.version>
+        <kafka.version>3.4.0</kafka.version>
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -138,10 +138,4 @@
             </resource>
         </resources>
     </build>
-    <repositories>
-        <repository>
-            <id>confluent</id>
-            <url>http://packages.confluent.io/maven/</url>
-        </repository>
-    </repositories>
 </project>
