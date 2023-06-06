@@ -41,6 +41,7 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
   public static final String ODPTopicName = "Topic";
   public static final String MAX_PACKAGE_SIZE = "I_MAXPACKAGESIZE";
   public static final String EXTRACTION_MODE = "I_EXTRACTION_MODE";
+  public static final String SAPROUTER_STRING = "I_SAPROUTER_STRING";
   
   public SAPSourceConnectorConfig(ConfigDef config, Map<String, String> parsedConfig) {
     super(config, parsedConfig);
