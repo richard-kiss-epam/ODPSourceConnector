@@ -21,19 +21,6 @@
             <version>${kafka.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sap.jco</groupId>
-            <artifactId>sapjco</artifactId>
-            <version>3.0.14</version>
-            <scope>system</scope>
-            <systemPath>/Users/rahul/Downloads/sapjco3.jar</systemPath>
-        </dependency>
     </dependencies>
 
     <build>
