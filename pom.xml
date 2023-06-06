@@ -31,7 +31,7 @@
             <groupId>com.sap.jco</groupId>
             <artifactId>sapjco</artifactId>
             <version>3.0.14</version>
-            <scope>system</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
