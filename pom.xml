@@ -31,7 +31,8 @@
             <groupId>com.sap.jco</groupId>
             <artifactId>sapjco</artifactId>
             <version>3.0.14</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/sapjco3.jar</systemPath>
         </dependency>
     </dependencies>
 
