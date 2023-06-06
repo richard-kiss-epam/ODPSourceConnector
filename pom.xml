@@ -142,7 +142,7 @@
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/epam/ODPSourceConnector</url>
+      <url>https://maven.pkg.github.com/richard-kiss-epam/ODPSourceConnector</url>
     </repository>
   </distributionManagement>
 </project>
