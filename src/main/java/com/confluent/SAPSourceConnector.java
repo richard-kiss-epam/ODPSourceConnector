@@ -49,6 +49,7 @@ public class SAPSourceConnector extends SourceConnector {
     jcoUser = sapSourceConnectorConfig.getString(sapDestinationDataProvider.JCO_USER);
     jcoPass = sapSourceConnectorConfig.getString(sapDestinationDataProvider.JCO_PASSWD);
     jcoLang = sapSourceConnectorConfig.getString(sapDestinationDataProvider.JCO_LANG);
+    jcoSAPRouterString = sapSourceConnectorConfig.getString(sapDestinationDataProvider.JCO_SAPROUTER);
     jcoPoolCapacity = String.valueOf(sapSourceConnectorConfig.getInt(sapDestinationDataProvider.JCO_POOL_CAPACITY));
     jcoPeakLimit = String.valueOf(sapSourceConnectorConfig.getInt(sapDestinationDataProvider.JCO_PEAK_LIMIT));
     odpName = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.ODP_NAME);
@@ -59,7 +60,7 @@ public class SAPSourceConnector extends SourceConnector {
     odptopic = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.ODPTopicName);
     packageSize =  String.valueOf(sapSourceConnectorConfig.getInt(SAPSourceConnectorConfig.MAX_PACKAGE_SIZE));
     extractionMode = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.EXTRACTION_MODE);
-    sapRouterString = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.SAPROUTER_STRING);
+    
   }
 
   @Override
@@ -84,6 +85,7 @@ public class SAPSourceConnector extends SourceConnector {
     config.put(sapDestinationDataProvider.JCO_LANG,jcoLang);
     config.put(sapDestinationDataProvider.JCO_POOL_CAPACITY,jcoPoolCapacity);
     config.put(sapDestinationDataProvider.JCO_PEAK_LIMIT,jcoPeakLimit);
+    config.put(sapDestinationDataProvider.JCO_SAPROUTER,jcoSAPRouterString);
     config.put(SAPSourceConnectorConfig.ODP_NAME,odpName);
     config.put(SAPSourceConnectorConfig.ODP_CONTEXT,odpContext);
     config.put(SAPSourceConnectorConfig.SUBSCRIBER_TYPE,odpSubscriberType);
@@ -92,7 +94,6 @@ public class SAPSourceConnector extends SourceConnector {
     config.put(SAPSourceConnectorConfig.ODPTopicName, odptopic);
     config.put(SAPSourceConnectorConfig.MAX_PACKAGE_SIZE, packageSize);
     config.put(SAPSourceConnectorConfig.EXTRACTION_MODE, extractionMode);
-    config.put(SAPSourceConnectorConfig.SAPROUTER_STRING, sapRouterString);
     configs.add(config);
     return configs;
 
