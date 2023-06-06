@@ -69,6 +69,7 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
             .define(sapDestinationDataProvider.JCO_LANG, Type.STRING, Importance.HIGH, MY_SETTING_JCO_LANG_DOC)
             .define(sapDestinationDataProvider.JCO_POOL_CAPACITY, Type.INT, Importance.HIGH, MY_SETTING_JCO_POOL_CAPACITY_DOC)
             .define(sapDestinationDataProvider.JCO_PEAK_LIMIT, Type.INT, Importance.HIGH, MY_SETTING_JCO_PEAK_LIMIT_DOC)
+            .define(sapDestinationDataProvider.JCO_SAPROUTER, Type.STRING, Importance.HIGH, MY_SAPROUTER_STRING_DOC)
             .define(ODP_NAME, Type.STRING, Importance.HIGH, MY_SETTING_ODP_NAME_DOC)
             .define(ODP_CONTEXT, Type.STRING, Importance.HIGH, MY_SETTING_ODP_CONTEXT_DOC)
             .define(SUBSCRIBER_TYPE, Type.STRING, Importance.HIGH, MY_SETTING_SUBSCRIBER_TYPE_DOC)
@@ -76,7 +77,6 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
             .define(SUBSCRIBER_PROCESS, Type.STRING, Importance.HIGH, MY_SETTING_SUBSCRIBER_PROCESS_DOC)
             .define(ODPTopicName, Type.STRING, Importance.HIGH, MY_SETTING_ODPSAPITEST_DOC)
             .define(MAX_PACKAGE_SIZE, Type.INT, Importance.HIGH, MY_SETTING_MAX_PACKAGE_SIZE_DOC)
-            .define(MAX_SAPROUTER_STRING, Type.STRING, Importance.HIGH, MY_SAPROUTER_STRING_DOC)
             .define(EXTRACTION_MODE, Type.STRING, "D",(ConfigDef.Validator)null,Importance.HIGH, MY_SETTING_EXTRACTION_MODE_DOC,(String)null, -1, ConfigDef.Width.NONE,EXTRACTION_MODE, recommender);
   }
 }
