@@ -29,6 +29,8 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
   private static final String MY_SETTING_ODPSAPITEST_DOC ="this is the setting for kafka topic name the data for this ODP will be pushed to";
   private static final String MY_SETTING_MAX_PACKAGE_SIZE_DOC= "A delta request will be split up in multiple packages having this configured size";
   private static final String MY_SETTING_EXTRACTION_MODE_DOC = "Choose the type of data extraction: full or delta";
+  private static final String MY_SAPROUTER_STRING_DOC = "SAP router string";
+
 
   // additional config other than JCO
   public static final String ODP_NAME="I_ODPNAME";
@@ -39,7 +41,7 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
   public static final String ODPTopicName = "Topic";
   public static final String MAX_PACKAGE_SIZE = "I_MAXPACKAGESIZE";
   public static final String EXTRACTION_MODE = "I_EXTRACTION_MODE";
-
+  
   public SAPSourceConnectorConfig(ConfigDef config, Map<String, String> parsedConfig) {
     super(config, parsedConfig);
   }
@@ -74,6 +76,7 @@ public class SAPSourceConnectorConfig extends AbstractConfig {
             .define(SUBSCRIBER_PROCESS, Type.STRING, Importance.HIGH, MY_SETTING_SUBSCRIBER_PROCESS_DOC)
             .define(ODPTopicName, Type.STRING, Importance.HIGH, MY_SETTING_ODPSAPITEST_DOC)
             .define(MAX_PACKAGE_SIZE, Type.INT, Importance.HIGH, MY_SETTING_MAX_PACKAGE_SIZE_DOC)
+            .define(MAX_SAPROUTER_STRING, Type.STRING, Importance.HIGH, MY_SAPROUTER_STRING_DOC)
             .define(EXTRACTION_MODE, Type.STRING, "D",(ConfigDef.Validator)null,Importance.HIGH, MY_SETTING_EXTRACTION_MODE_DOC,(String)null, -1, ConfigDef.Width.NONE,EXTRACTION_MODE, recommender);
   }
 }
