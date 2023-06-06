@@ -79,7 +79,9 @@ public class SAPSourceTask extends SourceTask {
     String jcoPeakLimit = String.valueOf(sapSourceConnectorConfig.getInt(sapDestinationDataProvider.JCO_PEAK_LIMIT));
     connectProperties.setProperty(sapDestinationDataProvider.JCO_PEAK_LIMIT,jcoPeakLimit);
 
-
+    String saprouterString = sapSourceConnectorConfig.getString(sapDestinationDataProvider.JCO_SAPROUTER);
+    connectProperties.setProperty(sapDestinationDataProvider.JCO_SAPROUTER,saprouterString);
+    
 
     // The destination name must match the name you use for looking up a destination.
     odpName = sapSourceConnectorConfig.getString(SAPSourceConnectorConfig.ODP_NAME);
